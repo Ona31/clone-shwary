@@ -71,6 +71,16 @@ nav{
     opacity: 0.8;
     align-items: center;
 }
+@media (max-width:720px) {
+    nav{
+        padding: 0;
+        justify-content: space-between;
+    }
+    .sup{
+        display: none;
+    }
+   
+}
 /*-====================-*/
 .menu-lang{
     display: flex;
@@ -180,6 +190,13 @@ section{
   font-weight: 600;
   text-align: center;
   padding: 2rem;
+}
+@media (max-width:720px) {
+    #hero h1{
+        font-size: 2rem;
+    }
+   
+   
 }
 
 .btn{
