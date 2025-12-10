@@ -159,6 +159,7 @@ main{
     height: 100vh;
     display: flex;
     flex-direction: column;
+    padding: 1rem;
 }
 
 section{
@@ -193,10 +194,14 @@ section{
 }
 @media (max-width:720px) {
     #hero h1{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
-   
-   
+   .btn{
+    gap: 1;
+   }
+   .btn A{
+    padding: .5rem;
+   }
 }
 
 .btn{
@@ -210,6 +215,15 @@ section{
     border-radius: 15px;
     font-weight: 500;
      transition: 0.3s ease-in-out;
+}
+@media (max-width:720px) {
+ 
+   .btn{
+    gap: 1;
+   }
+   .btn a{
+    padding: .5rem;
+   }
 }
 .cre{
     background: var(--primary);
@@ -229,6 +243,8 @@ section{
 }
 
 
+
+
 .phone {
     display: flex;
     position: relative;
@@ -240,6 +256,20 @@ section{
     z-index: 1;
 
 }
+@media (max-width:720px) {
+    .phone .ph {
+        width: 200px;
+    }
+   
+   
+}
+@media (max-width:720px) {
+    .phone .back {
+        width: 300px;
+    }
+   
+   
+}
 .phone .back{
     position: absolute;
     bottom: 2.7rem;
@@ -250,6 +280,12 @@ section{
     gap: 1.5rem;
     margin:2rem 0;
 }
+@media (max-width:720px) {
+     .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }}
 .cards .card{
     display: flex;
     background-color: var(--secondary);
@@ -268,6 +304,12 @@ section{
     justify-content: center;
     align-items: center;
 }
+@media (max-width:720px) {
+     .card .img-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }}
 .card .text-card{
     display: flex;
     flex-direction: column;
