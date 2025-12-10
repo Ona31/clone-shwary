@@ -1,0 +1,415 @@
+/* le selecteur universel  */
+
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+/* ------------------------------  */
+
+/* les variables (couleurs polices  .........)  */
+
+:root {
+    --primary:#00a870;
+    --secondary:#f1f5f9;
+    --secondary2:#f1f5f94c;
+    --secondary3:#f6f8fa;
+
+
+    --bg:#ffffff;
+    --text:#030407;
+    --shadow:#0304071e;
+
+    --border:#e0e3e7;
+    --deg:rgba(255, 255, 255, 0.337);
+    --deg2:#41404010;
+    --font-family: "DM Sans", sans-serif;
+}
+/* -----------------------------------------------  */
+
+
+/* le corps de la page  */
+body{
+    min-height: 100vh;
+    display: flex;
+    font-family: var(--font-family);
+}
+/* ---------------------------------------------------  */
+
+
+/* la barre de navigation  */
+
+a{
+    text-decoration: none;
+}
+header{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background: var(--deg);
+    padding: 1.5rem ;
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+}
+nav{
+    display: flex;
+    width: 100%;
+    padding:0 17rem ;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sup , .lang{
+    display: flex;
+    text-decoration: none;
+    font-size: .9rem;
+    color: var(--text);
+    font-weight: 500;
+    transition: .3s ease-in-out;
+    opacity: 0.8;
+    align-items: center;
+}
+/*-====================-*/
+.menu-lang{
+    display: flex;
+    position: relative;
+}
+.ul-menu{
+    display: none;
+}
+li{
+    display: flex;
+    transition: .3s ease-in-out;
+    padding: .5rem 3rem .5rem .9rem ;
+    border:2px solid transparent;
+    border-radius: 5px;
+
+}
+li:hover{
+    background: var(--border);
+    border:2px solid var(--text);
+    
+}
+ .active{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    list-style: none;
+    color: var(--text);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--shadow);
+    top: 120%;
+    animation: slideDown .3s linear;
+}
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* part du haut */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* arrive à sa position normale */
+    }
+}
+
+
+/*-====================-*/
+
+.sup:hover{
+    opacity: 100%;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo .svg{
+    width: 120px;
+    height: 21px;
+}
+.logo .namelogo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.lang{
+  background: var(--border);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+}
+/* -------------------------------------------------  */
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+#hero{
+    align-items: center;
+    padding: 8rem 0;
+
+}
+.card-drap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    gap: .5rem;
+    padding: 0.6rem;
+    background: repeating-linear-gradient(90deg,var(--primary),var(--bg),var(--primary));
+}
+.card-drap img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+#hero h1{
+  font-size: 6rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 2rem;
+}
+
+.btn{
+    display: flex;
+    gap: 2rem;
+}
+.btn a{
+    display: flex;
+   
+    padding: 1rem;
+    border-radius: 15px;
+    font-weight: 500;
+     transition: 0.3s ease-in-out;
+}
+.cre{
+    background: var(--primary);
+    color: var(--bg);
+   
+}
+.cre:hover{
+   background: #399469;
+}
+.ban{
+    background: var(--secondary);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+.ban:hover{
+    background: var(--border);
+}
+
+
+.phone {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 3rem;
+}
+.phone .ph{
+    width: 350px;
+    z-index: 1;
+
+}
+.phone .back{
+    position: absolute;
+    bottom: 2.7rem;
+}
+
+.cards{
+    display: flex;
+    gap: 1.5rem;
+    margin:2rem 0;
+}
+.cards .card{
+    display: flex;
+    background-color: var(--secondary);
+    padding: .5rem;
+    gap: 1rem;
+    align-items: center;
+    border-radius: 15px;
+
+}
+.card .img-card{
+    background: var(--bg);
+    border-radius: 15px;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .text-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 3rem;
+}
+.text-card h3{
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+
+}
+.text-card p{
+    color: var(--text);
+    opacity: 0.7;
+    font-size: .9rem;
+    letter-spacing: -1px;
+    font-weight: 500;
+}
+
+
+.wome {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0;
+    
+}
+.wome .tran{
+  position: absolute;
+  z-index: -1;
+}
+
+.card-deg{
+    position: absolute;
+    display: flex;
+    background:var(--deg2);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem;
+    border: 1px solid var(--deg);
+    box-shadow: 0px 3px 10px var(--shadow);
+    border-radius: 15px;
+    gap: .7rem;
+    bottom: 30%;
+    right: -20%;
+}
+.card-deg:nth-child(3){
+    bottom: 10%;
+    right: 20%;
+}
+.card-deg .img-card{
+    background: var(--secondary2);
+    padding: 0.7rem .5rem;
+    border-radius: 10px;
+    display: flex;
+}
+.card-deg .text-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+}
+.text-card .span{
+    display: flex;
+    color: var(--bg);
+    justify-content: space-between;
+    font-size: .8rem;
+}
+.text-card  .psp{
+    color: var(--bg);
+    font-size: .7rem;
+    opacity: 100%;
+    font-weight: 500;
+}
+
+.lock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.lock img{
+        width: 270px;
+        height: 350px;
+        transform: rotate(-45deg);
+        margin-left: -5rem;
+}
+.card-com{
+    border: 1px solid var(--border);
+    display: flex;
+    padding: .7rem ;
+    margin-bottom:2rem ;
+    border-radius: 50px;
+    opacity: 0.7;
+}
+
+footer{
+    display: flex;
+    background: var(--primary);
+    width: 100%;
+}
+footer .footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 15rem;
+    background: var(--secondary);
+    margin-bottom: 0.6rem;
+    border-radius: 0px 0px 35px 35px;
+}
+.footer .droit {
+    font-size: .7rem;
+    color: var(--text);
+    opacity: 0.5;
+}
+.links{
+    display: flex;
+    gap: .5rem;
+}
+.links a{
+  
+     font-size: .7rem;
+    color: var(--text);
+    transition: .3s ease-in-out;
+}
+.links a:hover{
+ color: var(--primary);
+    text-decoration:underline;
+}
+.reseaux{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.8rem;
+    
+}
+.reseaux a{
+    color: var(--primary);
+    
+}
+
+.terms{
+    display: block;
+    width: 100%;
+    height: 100vh;
+    padding: 3rem 20rem;
+}
+
+.terms h2{
+    margin-bottom: 1.5rem;
+}
+.terms p{
+     color: var(--text);
+    opacity: 0.7;
+    font-size: .9rem;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+.terms a{
+    color: var(--primary);
+    text-decoration: underline;
+}
